@@ -14,28 +14,26 @@ function NewPlantForm({ addPlant }) {
       [name]: value
     });
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!formData.name || !formData.image || !formData.price) {
       alert("Please fill in all fields");
       return;
     }
-    
-    // Add the new plant with inStock: true
+
     addPlant({
       name: formData.name,
       image: formData.image,
-      price: formData.price,
-      inStock: true
+      price: formData.price
     });
-    
+
     setFormData({
       name: "",
       image: "",
       price: ""
     });
   };
-  
 
   return (
     <div className="new-plant-form">

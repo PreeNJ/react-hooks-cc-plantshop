@@ -1,9 +1,8 @@
 import React from "react";
 
 function PlantCard({ plant, markAsSoldOut }) {
-  // Check if inStock is undefined, assume it's true by default
   const inStock = plant.inStock !== undefined ? plant.inStock : true;
-  
+
   return (
     <li className="card" data-testid="plant-item">
       <img src={plant.image} alt={plant.name} />
@@ -24,3 +23,4 @@ function PlantCard({ plant, markAsSoldOut }) {
 }
 
 export default PlantCard;
+

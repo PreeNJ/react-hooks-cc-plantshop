@@ -6,7 +6,7 @@ function PlantList({ plants, markAsSoldOut }) {
     <ul className="cards">
       {plants.map(plant => (
         <PlantCard 
-          key={plant.id} 
+          key={plant.id || plant.name} 
           plant={plant} 
           markAsSoldOut={markAsSoldOut} 
         />
